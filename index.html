@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detektor Objek AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Detektor Objek AI 📸</h1>
+            <p>Arahkan kamera ke objek di sekitar Anda</p>
+        </header>
+
+        <div class="video-wrapper">
+            <div id="loading" class="loading-overlay">
+                <div class="spinner"></div>
+                <p>Memuat model AI... (±10 detik)</p>
+            </div>
+            
+            <video id="video" autoplay playsinline muted></video>
+            
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <div class="controls">
+            <button id="startButton" class="button" disabled>
+                <span class="icon">▶️</span> Mulai Deteksi
+            </button>
+            <button id="switchButton" class="button" disabled>
+                <span class="icon">🔄</span> Ganti Kamera
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
